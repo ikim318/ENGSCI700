@@ -41,8 +41,23 @@ def separate_adhd_nt(df: pd.DataFrame):
 
 
 def separate_via_condition(df: pd.DataFrame):
+    df["Condition"] = df.apply(
+        lambda row: (
+            "task"
+            if row["Sequence_name"] == "flanker_events"
+            else (
+                "task_twitching"
+                if row["Sequence_name"] == "flanker_events_twitching"
+                else "rest"
+            )
+        ),
+        axis=1,
+    )
+    rest_df = df[df["Condition"] == "rest"]
+    task_df = df[df["Condition"] == "task"]
+    task_fidgeting_df = df[df["Condition"] == "task_twitching"]
 
-    return df
+    return rest_df, task_df, task_fidgeting_df
 
 
 def anova(df: pd.DataFrame, network: str) -> pd.DataFrame:
@@ -66,28 +81,102 @@ def filtering_anova(df: pd.DataFrame) -> pd.DataFrame:
     return df[df["p-value"] <= 0.05]
 
 
-def print_df(df: pd.DataFrame, title):
+def print_df(df: pd.DataFrame, title: str):
     # print(f"\n------<<ANOVA Results of {network}>>------")
-    print(f"\n------<<{title}>>------")
+    print(f"\n------ {title} ------")
     print(df)
 
 
-def load_and_analyze_networks(networks: list):
+def main(networks: list):
     """Load data for multiple networks, perform ANOVA, and filter results."""
-    results = []
-    for network in networks:
-        if network == "Sensorimotor":
-            network_data = pd.concat(
-                [read_file(f"SenMotor_{2020 + i}") for i in range(1, 4)]
-            )
-        else:
+    rest_results = pd.DataFrame()
+    task_results = pd.DataFrame()
+    task_fidgeting_results = pd.DataFrame()
+
+    # Open a log file where all results will be written
+    with open("anova_results_log.txt", "w") as log_file:
+        for network in networks:
             network_data = pd.concat(
                 [read_file(f"{network}_{2020 + i}") for i in range(1, 4)]
             )
-        anova_results = anova(network_data, f"{network} Network")
-        filtered_results = filtering_anova(anova_results)
 
-        return anova_results, filtered_results
+            rest_df, task_df, task_fidgeting_df = separate_via_condition(network_data)
+
+            for condition_df in [rest_df, task_df, task_fidgeting_df]:
+                anova_results = anova(condition_df, f"{network} Network")
+                filtered_results = filtering_anova(anova_results)
+
+                # Create log entries with network and condition info
+                condition_name = condition_df["Condition"].iloc[0]
+                log_file.write(f"\n\n{'=' * 50}\n")
+                log_file.write(
+                    f"ANOVA Results for {network} Network - {condition_name} Condition\n"
+                )
+                log_file.write(f"{'=' * 50}\n")
+                log_file.write(anova_results.to_string())
+                log_file.write(
+                    f"\n\nFiltered Results for {network} Network - {condition_name} Condition\n"
+                )
+                log_file.write(f"{'=' * 50}\n")
+                log_file.write(filtered_results.to_string())
+
+                # Concatenate filtered results into respective DataFrames
+                if condition_name == "rest":
+                    rest_results = pd.concat(
+                        [rest_results, filtered_results], ignore_index=True
+                    )
+                elif condition_name == "task":
+                    task_results = pd.concat(
+                        [task_results, filtered_results], ignore_index=True
+                    )
+                else:
+                    task_fidgeting_results = pd.concat(
+                        [task_fidgeting_results, filtered_results], ignore_index=True
+                    )
+
+    return rest_results, task_results, task_fidgeting_results
+
+
+#
+# def main(networks: list):
+#     """Load data for multiple networks, perform ANOVA, and filter results."""
+#     rest_results = pd.DataFrame()
+#     task_results = pd.DataFrame()
+#     task_fidgeting_results = pd.DataFrame()
+#
+#     for network in networks:
+#         network_data = pd.concat(
+#             [read_file(f"{network}_{2020 + i}") for i in range(1, 4)]
+#         )
+#
+#         rest_df, task_df, task_fidgeting_df = separate_via_condition(network_data)
+#
+#         for condition_df in [rest_df, task_df, task_fidgeting_df]:
+#             anova_results = anova(condition_df, f"{network} Network")
+#             filtered_results = filtering_anova(anova_results)
+#
+#             print_df(
+#                 anova_results,
+#                 f"{network} Network when {condition_df['Condition'].iloc[0]}",
+#             )
+#             print_df(
+#                 filtered_results,
+#                 f"{network} Network when {condition_df['Condition'].iloc[0]} (filtered)",
+#             )
+#
+#             if condition_df["Condition"].iloc[0] == "rest":
+#                 rest_results = pd.concat(
+#                     [rest_results, filtered_results], ignore_index=True
+#                 )
+#             elif condition_df["Condition"].iloc[0] == "task":
+#                 task_results = pd.concat(
+#                     [task_results, filtered_results], ignore_index=True
+#                 )
+#             else:
+#                 task_fidgeting_results = pd.concat(
+#                     [task_fidgeting_results, filtered_results], ignore_index=True
+#                 )
+#     return rest_results, task_results, task_fidgeting_results
 
 
 # if __name__ == "__main__":

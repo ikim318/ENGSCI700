@@ -1,14 +1,15 @@
-from methods.anova import load_and_analyze_networks, read_file
+from methods import anova
 import pandas as pd
 
 # List of networks to analyze
 mine_networks = ["Visual", "Salience", "FP"]
 partner_networks = ["Sensorimotor", "DA", "DMN"]
 
-network_data = pd.concat(
-    [read_file(f"{mine_networks[0]}_{2020 + i}") for i in range(1, 4)]
-)
-print(network_data)
+rest, task, task_fidgeting = anova.main(mine_networks)
+
+anova.print_df(rest, f"Resting")
+anova.print_df(task, f"Task")
+anova.print_df(task_fidgeting, f"Task with fidgeting")
 
 # # Perform ANOVA and filtering for both groups of networks
 # print("Analyzing 'mine' networks...")

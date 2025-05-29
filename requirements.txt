@@ -1,0 +1,9 @@
+pandas~=2.2.3
+matplotlib
+numpy
+openpyxl
+seaborn
+spicy
+statsmodels
+scikit-learn
+scipy~=1.15.3

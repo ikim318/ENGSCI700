@@ -196,3 +196,20 @@ Filtered Results for FP Network - task_twitching Condition
 Empty DataFrame
 Columns: [Feature, F-statistic, p-value]
 Index: []
+==================================================
+==================================================
+------ Resting ------
+                Feature  F-statistic   p-value
+0      Medial-Occipital     7.251092  0.009248
+1  Occipital-Lateral(L)     6.771685  0.011737
+------ Task ------
+              Feature  F-statistic   p-value
+0   Medial-Lateral(L)    26.535364  0.000003
+1   Medial-Lateral(R)    18.988989  0.000054
+2         ACC-RPFC(L)     5.479466  0.022701
+3  AInsula(L)-RPFC(R)     4.295991  0.042656
+4      LPFC(L)-PPC(L)     6.861821  0.011220
+------ Task with Fidgeting ------
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []

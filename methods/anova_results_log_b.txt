@@ -1,0 +1,163 @@
+
+
+==================================================
+ANOVA Results for Sensorimotor Network - rest Condition
+==================================================
+                 Feature  F-statistic   p-value
+0  Lateral(L)-Lateral(R)     0.519157  0.474095
+1    Lateral(L)-Superior     1.211877  0.275509
+2    Lateral(R)-Superior     0.213029  0.646130
+
+Filtered Results for Sensorimotor Network - rest Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for Sensorimotor Network - task Condition
+==================================================
+                 Feature  F-statistic   p-value
+0  Lateral(L)-Lateral(R)     0.758168  0.387492
+1    Lateral(L)-Superior     0.013348  0.908420
+2    Lateral(R)-Superior     0.059539  0.808087
+
+Filtered Results for Sensorimotor Network - task Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for Sensorimotor Network - task_twitching Condition
+==================================================
+                 Feature  F-statistic   p-value
+0  Lateral(L)-Lateral(R)     0.021271  0.884549
+1    Lateral(L)-Superior     1.590983  0.212235
+2    Lateral(R)-Superior     1.250201  0.268124
+
+Filtered Results for Sensorimotor Network - task_twitching Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for DA Network - rest Condition
+==================================================
+         Feature  F-statistic   p-value
+0  FEF(L)-FEF(R)     0.928624  0.339222
+1  FEF(L)-IPS(L)     1.823141  0.182185
+2  FEF(L)-IPS(R)     3.006196  0.088260
+3  FEF(R)-IPS(L)     1.089795  0.300848
+4  FEF(R)-IPS(R)     1.850165  0.179028
+5  IPS(L)-IPS(R)     0.040492  0.841227
+
+Filtered Results for DA Network - rest Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for DA Network - task Condition
+==================================================
+         Feature  F-statistic   p-value
+0  FEF(L)-FEF(R)     0.317713  0.575158
+1  FEF(L)-IPS(L)     0.002351  0.961498
+2  FEF(L)-IPS(R)     1.929974  0.170072
+3  FEF(R)-IPS(L)     0.364772  0.548223
+4  FEF(R)-IPS(R)     0.799248  0.375013
+5  IPS(L)-IPS(R)     1.298468  0.259178
+
+Filtered Results for DA Network - task Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for DA Network - task_twitching Condition
+==================================================
+         Feature  F-statistic   p-value
+0  FEF(L)-FEF(R)     2.000365  0.162607
+1  FEF(L)-IPS(L)     0.113221  0.737721
+2  FEF(L)-IPS(R)     0.213109  0.646068
+3  FEF(R)-IPS(L)     1.964079  0.166406
+4  FEF(R)-IPS(R)     2.837799  0.097445
+5  IPS(L)-IPS(R)     0.258476  0.613097
+
+Filtered Results for DA Network - task_twitching Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for DMN Network - rest Condition
+==================================================
+       Feature  F-statistic   p-value
+0     MPFC-PCC     6.481752  0.013578
+1   MPFC-LP(L)     6.567698  0.013002
+2   MPFC-LP(R)     5.471521  0.022795
+3    PCC-LP(L)     3.743210  0.057905
+4    PCC-LP(R)     1.477368  0.229111
+5  LP(L)-LP(R)     4.247421  0.043803
+
+Filtered Results for DMN Network - rest Condition
+==================================================
+       Feature  F-statistic   p-value
+0     MPFC-PCC     6.481752  0.013578
+1   MPFC-LP(L)     6.567698  0.013002
+2   MPFC-LP(R)     5.471521  0.022795
+5  LP(L)-LP(R)     4.247421  0.043803
+
+==================================================
+ANOVA Results for DMN Network - task Condition
+==================================================
+       Feature  F-statistic   p-value
+0     MPFC-PCC     0.058423  0.809858
+1   MPFC-LP(L)     0.344335  0.559615
+2   MPFC-LP(R)     0.131377  0.718326
+3    PCC-LP(L)     0.497271  0.483524
+4    PCC-LP(R)     1.352003  0.249690
+5  LP(L)-LP(R)     0.437628  0.510889
+
+Filtered Results for DMN Network - task Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+
+==================================================
+ANOVA Results for DMN Network - task_twitching Condition
+==================================================
+       Feature  F-statistic   p-value
+0     MPFC-PCC     0.333201  0.566014
+1   MPFC-LP(L)     0.515825  0.475511
+2   MPFC-LP(R)     1.381035  0.244727
+3    PCC-LP(L)     0.488378  0.487444
+4    PCC-LP(R)     0.013611  0.907528
+5  LP(L)-LP(R)     1.409017  0.240059
+
+Filtered Results for DMN Network - task_twitching Condition
+==================================================
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+==================================================
+==================================================
+------ Resting ------
+       Feature  F-statistic   p-value
+0     MPFC-PCC     6.481752  0.013578
+1   MPFC-LP(L)     6.567698  0.013002
+2   MPFC-LP(R)     5.471521  0.022795
+3  LP(L)-LP(R)     4.247421  0.043803
+------ Task ------
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []
+------ Task with Fidgeting ------
+Empty DataFrame
+Columns: [Feature, F-statistic, p-value]
+Index: []

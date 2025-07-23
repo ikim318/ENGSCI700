@@ -1,16 +1,28 @@
-from results import anova
+from anova import print_df, main
 import pandas as pd
 
 # List of networks to analyze
 mine_networks = ["Visual", "Salience", "FP"]
 partner_networks = ["Sensorimotor", "DA", "DMN"]
 
-rest, task, task_fidgeting = anova.main(mine_networks, "anova_results_log")
-restb, taskb, task_fidgetingb = anova.main(partner_networks, "anova_results_log_b")
+rest, task, task_fidgeting = main(mine_networks, "anova_results_log")
+restb, taskb, task_fidgetingb = main(partner_networks, "anova_results_log_b")
 
-anova.print_df(rest, f"Resting")
-anova.print_df(task, f"Task")
-anova.print_df(task_fidgeting, f"Task with fidgeting")
+print_df(rest, f"Resting")
+print_df(task, f"Task")
+print_df(task_fidgeting, f"Task with fidgeting")
+
+import pandas as pd
+
+# 각 데이터프레임에 'condition' 열 추가
+rest["condition"] = "rest"
+task["condition"] = "task"
+task_fidgeting["condition"] = "task_fidgeting"
+
+# 하나로 합치기
+networks = pd.concat([rest, task, task_fidgeting], ignore_index=True)
+networks.to_excel("significant_networks.xlsx", index=False)
+
 
 # # Perform ANOVA and filtering for both groups of networks
 # print("Analyzing 'mine' networks...")

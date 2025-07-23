@@ -1,12 +1,14 @@
 import pandas as pd
 from scipy.stats import f_oneway
-import re
+import re, os
 
-# Directory path for network data files
+
+# 현재 파일(anova.py)의 절대 경로 가져오기
+base_dir = os.path.dirname(os.path.abspath(__file__))
 directory = "../data/Brain_networks/Network_CC/"
 
 # Load demographic info once
-info = pd.read_excel(f"../data/Brain_networks/Demographic.xlsx")
+info = pd.read_excel(os.path.abspath(os.path.join(base_dir, '../data/Brain_networks/Demographic.xlsx')))
 info["Participant_ID"] = info["Participant_ID"].apply(
     lambda x: int(re.findall(r"\d+", str(x))[0])
 )

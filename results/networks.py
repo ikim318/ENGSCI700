@@ -5,8 +5,12 @@ import pandas as pd
 mine_networks = ["Visual", "Salience", "FP"]
 partner_networks = ["Sensorimotor", "DA", "DMN"]
 
-rest, task, task_fidgeting = main(mine_networks, "anova_results_log")
-restb, taskb, task_fidgetingb = main(partner_networks, "anova_results_log_b")
+rest, task, task_fidgeting = main(
+    mine_networks, "anova_results_log", ["_Visual", "_Salience", "_FP"]
+)
+restb, taskb, task_fidgetingb = main(
+    partner_networks, "anova_results_log_b", ["_SenMotor", "_DA", "_DMN"]
+)
 
 print_df(rest, f"Resting")
 print_df(task, f"Task")

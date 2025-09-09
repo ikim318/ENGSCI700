@@ -7,3 +7,5 @@ spicy
 statsmodels
 scikit-learn
 scipy~=1.15.3
+tsfresh
+xgboost

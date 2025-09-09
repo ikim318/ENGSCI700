@@ -8,7 +8,9 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 directory = "../data/Brain_networks/Network_CC/"
 
 # Load demographic info once
-info = pd.read_excel(os.path.abspath(os.path.join(base_dir, '../data/Brain_networks/Demographic.xlsx')))
+info = pd.read_excel(
+    os.path.abspath(os.path.join(base_dir, "../data/Brain_networks/Demographic.xlsx"))
+)
 info["Participant_ID"] = info["Participant_ID"].apply(
     lambda x: int(re.findall(r"\d+", str(x))[0])
 )
@@ -56,7 +58,7 @@ def separate_via_condition(df: pd.DataFrame):
     )
 
 
-def perform_anova(df: pd.DataFrame, network: str) -> pd.DataFrame:
+def perform_anova(df: pd.DataFrame, network: str, suffix: str) -> pd.DataFrame:
     """Perform ANOVA test between ADHD and NT groups for each connection."""
     df_clean = df.dropna()
     connections = get_relevant_columns(df_clean)
@@ -65,7 +67,7 @@ def perform_anova(df: pd.DataFrame, network: str) -> pd.DataFrame:
     # Perform ANOVA test for each connection column across years
     anova_results = [
         {
-            "Feature": connection,
+            "Feature": connection + suffix,
             "F-statistic": f_oneway(adhd[connection], nt[connection])[0],
             "p-value": f_oneway(adhd[connection], nt[connection])[1],
         }
@@ -107,7 +109,7 @@ def print_df(df: pd.DataFrame, title: str):
     print(df)
 
 
-def main(networks: list, log_name: str):
+def main(networks: list, log_name: str, network_suffices: list):
     """Load data for multiple networks, perform ANOVA, and filter results."""
     rest_results, task_results, task_fidgeting_results = (
         pd.DataFrame(),
@@ -117,7 +119,7 @@ def main(networks: list, log_name: str):
 
     # Open a log file where all results will be written
     with open(f"{log_name}.txt", "w") as log_file:
-        for network in networks:
+        for network, suffix in zip(networks, network_suffices):
             if network == "Sensorimotor":
                 network_data = pd.concat(
                     [read_file(f"SenMotor_{2020 + i}") for i in range(1, 4)]
@@ -133,7 +135,9 @@ def main(networks: list, log_name: str):
                 [rest_df, task_df, task_fidgeting_df],
                 ["rest", "task", "task_twitching"],
             ):
-                anova_results = perform_anova(condition_df, f"{network} Network")
+                anova_results = perform_anova(
+                    condition_df, f"{network} Network", suffix
+                )
                 filtered_results = filtering_anova(anova_results)
 
                 # Log the results for each condition

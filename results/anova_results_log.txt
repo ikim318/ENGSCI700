@@ -3,47 +3,47 @@
 ==================================================
 ANOVA Results for Visual Network - rest Condition
 ==================================================
-                 Feature  F-statistic   p-value
-0       Medial-Occipital     7.251092  0.009248
-1      Medial-Lateral(L)     0.065427  0.799020
-2      Medial-Lateral(R)     0.102486  0.750017
-3   Occipital-Lateral(L)     6.771685  0.011737
-4   Occipital-Lateral(R)     2.335584  0.131883
-5  Lateral(L)-Lateral(R)     0.410587  0.524195
+                        Feature  F-statistic   p-value
+0       Medial-Occipital_Visual     7.251092  0.009248
+1      Medial-Lateral(L)_Visual     0.065427  0.799020
+2      Medial-Lateral(R)_Visual     0.102486  0.750017
+3   Occipital-Lateral(L)_Visual     6.771685  0.011737
+4   Occipital-Lateral(R)_Visual     2.335584  0.131883
+5  Lateral(L)-Lateral(R)_Visual     0.410587  0.524195
 
 Filtered Results for Visual Network - rest Condition
 ==================================================
-                Feature  F-statistic   p-value
-0      Medial-Occipital     7.251092  0.009248
-3  Occipital-Lateral(L)     6.771685  0.011737
+                       Feature  F-statistic   p-value
+0      Medial-Occipital_Visual     7.251092  0.009248
+3  Occipital-Lateral(L)_Visual     6.771685  0.011737
 
 ==================================================
 ANOVA Results for Visual Network - task Condition
 ==================================================
-                 Feature  F-statistic   p-value
-0       Medial-Occipital     2.312446  0.133775
-1      Medial-Lateral(L)    26.535364  0.000003
-2      Medial-Lateral(R)    18.988989  0.000054
-3   Occipital-Lateral(L)     0.771197  0.383471
-4   Occipital-Lateral(R)     1.279460  0.262655
-5  Lateral(L)-Lateral(R)     0.411969  0.523501
+                        Feature  F-statistic   p-value
+0       Medial-Occipital_Visual     2.312446  0.133775
+1      Medial-Lateral(L)_Visual    26.535364  0.000003
+2      Medial-Lateral(R)_Visual    18.988989  0.000054
+3   Occipital-Lateral(L)_Visual     0.771197  0.383471
+4   Occipital-Lateral(R)_Visual     1.279460  0.262655
+5  Lateral(L)-Lateral(R)_Visual     0.411969  0.523501
 
 Filtered Results for Visual Network - task Condition
 ==================================================
-             Feature  F-statistic   p-value
-1  Medial-Lateral(L)    26.535364  0.000003
-2  Medial-Lateral(R)    18.988989  0.000054
+                    Feature  F-statistic   p-value
+1  Medial-Lateral(L)_Visual    26.535364  0.000003
+2  Medial-Lateral(R)_Visual    18.988989  0.000054
 
 ==================================================
 ANOVA Results for Visual Network - task_twitching Condition
 ==================================================
-                 Feature  F-statistic   p-value
-0       Medial-Occipital     1.569399  0.215322
-1      Medial-Lateral(L)     3.131495  0.082050
-2      Medial-Lateral(R)     1.422658  0.237823
-3   Occipital-Lateral(L)     0.086872  0.769244
-4   Occipital-Lateral(R)     0.524989  0.471634
-5  Lateral(L)-Lateral(R)     3.201999  0.078770
+                        Feature  F-statistic   p-value
+0       Medial-Occipital_Visual     1.569399  0.215322
+1      Medial-Lateral(L)_Visual     3.131495  0.082050
+2      Medial-Lateral(R)_Visual     1.422658  0.237823
+3   Occipital-Lateral(L)_Visual     0.086872  0.769244
+4   Occipital-Lateral(R)_Visual     0.524989  0.471634
+5  Lateral(L)-Lateral(R)_Visual     3.201999  0.078770
 
 Filtered Results for Visual Network - task_twitching Condition
 ==================================================
@@ -54,28 +54,28 @@ Index: []
 ==================================================
 ANOVA Results for Salience Network - rest Condition
 ==================================================
-                  Feature  F-statistic   p-value
-0          ACC-AInsula(L)     0.755255  0.388400
-1          ACC-AInsula(R)     1.107647  0.296959
-2             ACC-RPFC(L)     0.219275  0.641348
-3             ACC-RPFC(R)     0.754257  0.388711
-4              ACC-SMG(L)     1.071204  0.304970
-5              ACC-SMG(R)     0.483708  0.489525
-6   AInsula(L)-AInsula(R)     0.864615  0.356305
-7      AInsula(L)-RPFC(L)     1.543296  0.219127
-8      AInsula(L)-RPFC(R)     0.710081  0.402879
-9       AInsula(L)-SMG(L)     0.022724  0.880700
-10      AInsula(L)-SMG(R)     0.006385  0.936587
-11     AInsula(R)-RPFC(L)     1.908986  0.172375
-12     AInsula(R)-RPFC(R)     0.828791  0.366390
-13      AInsula(R)-SMG(L)     0.726575  0.397502
-14      AInsula(R)-SMG(R)     0.113244  0.737695
-15        RPFC(L)-RPFC(R)     0.740404  0.393075
-16         RPFC(L)-SMG(L)     2.742020  0.103142
-17         RPFC(L)-SMG(R)     0.004602  0.946150
-18         RPFC(R)-SMG(L)     0.296935  0.587900
-19         RPFC(R)-SMG(R)     0.043819  0.834924
-20          SMG(L)-SMG(R)     0.089778  0.765531
+                           Feature  F-statistic   p-value
+0          ACC-AInsula(L)_Salience     0.755255  0.388400
+1          ACC-AInsula(R)_Salience     1.107647  0.296959
+2             ACC-RPFC(L)_Salience     0.219275  0.641348
+3             ACC-RPFC(R)_Salience     0.754257  0.388711
+4              ACC-SMG(L)_Salience     1.071204  0.304970
+5              ACC-SMG(R)_Salience     0.483708  0.489525
+6   AInsula(L)-AInsula(R)_Salience     0.864615  0.356305
+7      AInsula(L)-RPFC(L)_Salience     1.543296  0.219127
+8      AInsula(L)-RPFC(R)_Salience     0.710081  0.402879
+9       AInsula(L)-SMG(L)_Salience     0.022724  0.880700
+10      AInsula(L)-SMG(R)_Salience     0.006385  0.936587
+11     AInsula(R)-RPFC(L)_Salience     1.908986  0.172375
+12     AInsula(R)-RPFC(R)_Salience     0.828791  0.366390
+13      AInsula(R)-SMG(L)_Salience     0.726575  0.397502
+14      AInsula(R)-SMG(R)_Salience     0.113244  0.737695
+15        RPFC(L)-RPFC(R)_Salience     0.740404  0.393075
+16         RPFC(L)-SMG(L)_Salience     2.742020  0.103142
+17         RPFC(L)-SMG(R)_Salience     0.004602  0.946150
+18         RPFC(R)-SMG(L)_Salience     0.296935  0.587900
+19         RPFC(R)-SMG(R)_Salience     0.043819  0.834924
+20          SMG(L)-SMG(R)_Salience     0.089778  0.765531
 
 Filtered Results for Salience Network - rest Condition
 ==================================================
@@ -86,60 +86,60 @@ Index: []
 ==================================================
 ANOVA Results for Salience Network - task Condition
 ==================================================
-                  Feature  F-statistic   p-value
-0          ACC-AInsula(L)     3.349693  0.072357
-1          ACC-AInsula(R)     0.146143  0.703646
-2             ACC-RPFC(L)     5.479466  0.022701
-3             ACC-RPFC(R)     3.516436  0.065800
-4              ACC-SMG(L)     1.562634  0.216300
-5              ACC-SMG(R)     1.798657  0.185103
-6   AInsula(L)-AInsula(R)     0.286139  0.594750
-7      AInsula(L)-RPFC(L)     3.536802  0.065045
-8      AInsula(L)-RPFC(R)     4.295991  0.042656
-9       AInsula(L)-SMG(L)     0.839540  0.363323
-10      AInsula(L)-SMG(R)     0.486885  0.488108
-11     AInsula(R)-RPFC(L)     3.797784  0.056163
-12     AInsula(R)-RPFC(R)     1.513648  0.223550
-13      AInsula(R)-SMG(L)     0.109016  0.742457
-14      AInsula(R)-SMG(R)     0.051531  0.821219
-15        RPFC(L)-RPFC(R)     1.727609  0.193891
-16         RPFC(L)-SMG(L)     3.665630  0.060483
-17         RPFC(L)-SMG(R)     0.723090  0.398629
-18         RPFC(R)-SMG(L)     1.394009  0.242549
-19         RPFC(R)-SMG(R)     0.211569  0.647260
-20          SMG(L)-SMG(R)     0.566021  0.454887
+                           Feature  F-statistic   p-value
+0          ACC-AInsula(L)_Salience     3.349693  0.072357
+1          ACC-AInsula(R)_Salience     0.146143  0.703646
+2             ACC-RPFC(L)_Salience     5.479466  0.022701
+3             ACC-RPFC(R)_Salience     3.516436  0.065800
+4              ACC-SMG(L)_Salience     1.562634  0.216300
+5              ACC-SMG(R)_Salience     1.798657  0.185103
+6   AInsula(L)-AInsula(R)_Salience     0.286139  0.594750
+7      AInsula(L)-RPFC(L)_Salience     3.536802  0.065045
+8      AInsula(L)-RPFC(R)_Salience     4.295991  0.042656
+9       AInsula(L)-SMG(L)_Salience     0.839540  0.363323
+10      AInsula(L)-SMG(R)_Salience     0.486885  0.488108
+11     AInsula(R)-RPFC(L)_Salience     3.797784  0.056163
+12     AInsula(R)-RPFC(R)_Salience     1.513648  0.223550
+13      AInsula(R)-SMG(L)_Salience     0.109016  0.742457
+14      AInsula(R)-SMG(R)_Salience     0.051531  0.821219
+15        RPFC(L)-RPFC(R)_Salience     1.727609  0.193891
+16         RPFC(L)-SMG(L)_Salience     3.665630  0.060483
+17         RPFC(L)-SMG(R)_Salience     0.723090  0.398629
+18         RPFC(R)-SMG(L)_Salience     1.394009  0.242549
+19         RPFC(R)-SMG(R)_Salience     0.211569  0.647260
+20          SMG(L)-SMG(R)_Salience     0.566021  0.454887
 
 Filtered Results for Salience Network - task Condition
 ==================================================
-              Feature  F-statistic   p-value
-2         ACC-RPFC(L)     5.479466  0.022701
-8  AInsula(L)-RPFC(R)     4.295991  0.042656
+                       Feature  F-statistic   p-value
+2         ACC-RPFC(L)_Salience     5.479466  0.022701
+8  AInsula(L)-RPFC(R)_Salience     4.295991  0.042656
 
 ==================================================
 ANOVA Results for Salience Network - task_twitching Condition
 ==================================================
-                  Feature  F-statistic   p-value
-0          ACC-AInsula(L)     0.797217  0.375617
-1          ACC-AInsula(R)     0.050816  0.822441
-2             ACC-RPFC(L)     0.129203  0.720565
-3             ACC-RPFC(R)     1.573466  0.214736
-4              ACC-SMG(L)     0.204357  0.652913
-5              ACC-SMG(R)     0.152718  0.697384
-6   AInsula(L)-AInsula(R)     0.015412  0.901630
-7      AInsula(L)-RPFC(L)     1.025382  0.315452
-8      AInsula(L)-RPFC(R)     1.345172  0.250876
-9       AInsula(L)-SMG(L)     0.074602  0.785720
-10      AInsula(L)-SMG(R)     0.006920  0.933987
-11     AInsula(R)-RPFC(L)     1.499598  0.225684
-12     AInsula(R)-RPFC(R)     1.439528  0.235094
-13      AInsula(R)-SMG(L)     0.763981  0.385690
-14      AInsula(R)-SMG(R)     0.972686  0.328108
-15        RPFC(L)-RPFC(R)     0.282518  0.597086
-16         RPFC(L)-SMG(L)     2.936709  0.091927
-17         RPFC(L)-SMG(R)     1.626138  0.207322
-18         RPFC(R)-SMG(L)     3.416642  0.069642
-19         RPFC(R)-SMG(R)     0.030558  0.861838
-20          SMG(L)-SMG(R)     0.228955  0.634098
+                           Feature  F-statistic   p-value
+0          ACC-AInsula(L)_Salience     0.797217  0.375617
+1          ACC-AInsula(R)_Salience     0.050816  0.822441
+2             ACC-RPFC(L)_Salience     0.129203  0.720565
+3             ACC-RPFC(R)_Salience     1.573466  0.214736
+4              ACC-SMG(L)_Salience     0.204357  0.652913
+5              ACC-SMG(R)_Salience     0.152718  0.697384
+6   AInsula(L)-AInsula(R)_Salience     0.015412  0.901630
+7      AInsula(L)-RPFC(L)_Salience     1.025382  0.315452
+8      AInsula(L)-RPFC(R)_Salience     1.345172  0.250876
+9       AInsula(L)-SMG(L)_Salience     0.074602  0.785720
+10      AInsula(L)-SMG(R)_Salience     0.006920  0.933987
+11     AInsula(R)-RPFC(L)_Salience     1.499598  0.225684
+12     AInsula(R)-RPFC(R)_Salience     1.439528  0.235094
+13      AInsula(R)-SMG(L)_Salience     0.763981  0.385690
+14      AInsula(R)-SMG(R)_Salience     0.972686  0.328108
+15        RPFC(L)-RPFC(R)_Salience     0.282518  0.597086
+16         RPFC(L)-SMG(L)_Salience     2.936709  0.091927
+17         RPFC(L)-SMG(R)_Salience     1.626138  0.207322
+18         RPFC(R)-SMG(L)_Salience     3.416642  0.069642
+19         RPFC(R)-SMG(R)_Salience     0.030558  0.861838
+20          SMG(L)-SMG(R)_Salience     0.228955  0.634098
 
 Filtered Results for Salience Network - task_twitching Condition
 ==================================================
@@ -150,13 +150,13 @@ Index: []
 ==================================================
 ANOVA Results for FP Network - rest Condition
 ==================================================
-           Feature  F-statistic   p-value
-0   LPFC(L)-PPC(L)     2.548893  0.115806
-1  LPFC(L)-LPFC(R)     1.638586  0.205616
-2   LPFC(L)-PPC(R)     0.087106  0.768943
-3   PPC(L)-LPFC(R)     2.792158  0.100115
-4    PPC(L)-PPC(R)     1.163619  0.285182
-5   LPFC(R)-PPC(R)     1.410432  0.239826
+              Feature  F-statistic   p-value
+0   LPFC(L)-PPC(L)_FP     2.548893  0.115806
+1  LPFC(L)-LPFC(R)_FP     1.638586  0.205616
+2   LPFC(L)-PPC(R)_FP     0.087106  0.768943
+3   PPC(L)-LPFC(R)_FP     2.792158  0.100115
+4    PPC(L)-PPC(R)_FP     1.163619  0.285182
+5   LPFC(R)-PPC(R)_FP     1.410432  0.239826
 
 Filtered Results for FP Network - rest Condition
 ==================================================
@@ -167,29 +167,29 @@ Index: []
 ==================================================
 ANOVA Results for FP Network - task Condition
 ==================================================
-           Feature  F-statistic   p-value
-0   LPFC(L)-PPC(L)     6.861821  0.011220
-1  LPFC(L)-LPFC(R)     1.148567  0.288289
-2   LPFC(L)-PPC(R)     1.264551  0.265424
-3   PPC(L)-LPFC(R)     0.021122  0.884951
-4    PPC(L)-PPC(R)     0.112588  0.738428
-5   LPFC(R)-PPC(R)     2.436172  0.124006
+              Feature  F-statistic   p-value
+0   LPFC(L)-PPC(L)_FP     6.861821  0.011220
+1  LPFC(L)-LPFC(R)_FP     1.148567  0.288289
+2   LPFC(L)-PPC(R)_FP     1.264551  0.265424
+3   PPC(L)-LPFC(R)_FP     0.021122  0.884951
+4    PPC(L)-PPC(R)_FP     0.112588  0.738428
+5   LPFC(R)-PPC(R)_FP     2.436172  0.124006
 
 Filtered Results for FP Network - task Condition
 ==================================================
-          Feature  F-statistic  p-value
-0  LPFC(L)-PPC(L)     6.861821  0.01122
+             Feature  F-statistic  p-value
+0  LPFC(L)-PPC(L)_FP     6.861821  0.01122
 
 ==================================================
 ANOVA Results for FP Network - task_twitching Condition
 ==================================================
-           Feature  F-statistic   p-value
-0   LPFC(L)-PPC(L)     3.846270  0.054664
-1  LPFC(L)-LPFC(R)     0.010820  0.917514
-2   LPFC(L)-PPC(R)     0.070910  0.790960
-3   PPC(L)-LPFC(R)     0.433073  0.513089
-4    PPC(L)-PPC(R)     0.027633  0.868552
-5   LPFC(R)-PPC(R)     1.594271  0.211770
+              Feature  F-statistic   p-value
+0   LPFC(L)-PPC(L)_FP     3.846270  0.054664
+1  LPFC(L)-LPFC(R)_FP     0.010820  0.917514
+2   LPFC(L)-PPC(R)_FP     0.070910  0.790960
+3   PPC(L)-LPFC(R)_FP     0.433073  0.513089
+4    PPC(L)-PPC(R)_FP     0.027633  0.868552
+5   LPFC(R)-PPC(R)_FP     1.594271  0.211770
 
 Filtered Results for FP Network - task_twitching Condition
 ==================================================
@@ -199,16 +199,16 @@ Index: []
 ==================================================
 ==================================================
 ------ Resting ------
-                Feature  F-statistic   p-value
-0      Medial-Occipital     7.251092  0.009248
-1  Occipital-Lateral(L)     6.771685  0.011737
+                       Feature  F-statistic   p-value
+0      Medial-Occipital_Visual     7.251092  0.009248
+1  Occipital-Lateral(L)_Visual     6.771685  0.011737
 ------ Task ------
-              Feature  F-statistic   p-value
-0   Medial-Lateral(L)    26.535364  0.000003
-1   Medial-Lateral(R)    18.988989  0.000054
-2         ACC-RPFC(L)     5.479466  0.022701
-3  AInsula(L)-RPFC(R)     4.295991  0.042656
-4      LPFC(L)-PPC(L)     6.861821  0.011220
+                       Feature  F-statistic   p-value
+0     Medial-Lateral(L)_Visual    26.535364  0.000003
+1     Medial-Lateral(R)_Visual    18.988989  0.000054
+2         ACC-RPFC(L)_Salience     5.479466  0.022701
+3  AInsula(L)-RPFC(R)_Salience     4.295991  0.042656
+4            LPFC(L)-PPC(L)_FP     6.861821  0.011220
 ------ Task with Fidgeting ------
 Empty DataFrame
 Columns: [Feature, F-statistic, p-value]

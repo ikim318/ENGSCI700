@@ -1,6 +1,9 @@
 *.pdf
 ADHD_reports
 data/Data_paper
+.DS_Store
+.vscode/
+test/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
